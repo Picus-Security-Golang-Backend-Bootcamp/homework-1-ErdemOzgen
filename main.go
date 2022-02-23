@@ -4,7 +4,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"homework-1-ErdemOzgen/jsonops"
+	"homework-1-ErdemOzgen/restapi"
 	"homework-1-ErdemOzgen/search"
+	"log"
+	"net/http"
+
+	"github.com/gorilla/mux"
 )
 
 //type Book model.Book // Questtion []search.Book is good implementation???
@@ -32,5 +37,15 @@ func main() {
 	//----------------------------------------------------------------
 	// 3. Print all books
 	//listBooks(books)
+
+	//----------------------------------------------------------------
+	// 4. Add extra REST API
+
+	router := mux.NewRouter()
+	router.HandleFunc("/books", restapi.GetAllBooks).Methods("GET")
+	router.HandleFunc("/books/{author}", restapi.GetBookByAuthor).Methods("GET")
+	router.HandleFunc("/books/{title}", restapi.GetBookByTitle).Methods("GET")
+	fmt.Println("Starting server on port 8000...")
+	log.Fatal(http.ListenAndServe(":8000", router))
 
 }
