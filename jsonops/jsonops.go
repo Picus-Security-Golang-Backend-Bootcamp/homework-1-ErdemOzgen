@@ -15,7 +15,7 @@ func OpenJsonFile(f string) string {
 		fmt.Println(err)
 	}
 	defer jsonFile.Close()
-	fmt.Println("Successfully Opened users.json")
+	fmt.Println("Successfully Opened", f)
 	var buf bytes.Buffer
 	io.Copy(&buf, jsonFile)
 	asString := buf.String()
