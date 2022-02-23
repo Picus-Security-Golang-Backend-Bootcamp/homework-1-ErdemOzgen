@@ -4,18 +4,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"homework-1-ErdemOzgen/jsonops"
+	"homework-1-ErdemOzgen/model"
 )
 
-type Book struct {
-	Author    string `json:"author"`
-	Title     string `json:"title"`
-	Pages     int    `json:"pages"`
-	Country   string `json:"country"`
-	ImageLink string `json:"imageLink"`
-	Year      string `json:"year"`
-	Language  string `json:"language"`
-	Link      string `json:"link"`
-}
+type Book model.Book
 
 func searchByAuthor(author string, books []Book) {
 	fmt.Println("Searching...") // TODO: After location set get rid of this line
