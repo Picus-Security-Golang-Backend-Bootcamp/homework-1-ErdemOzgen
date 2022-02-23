@@ -6,11 +6,42 @@ import (
 	"homework-1-ErdemOzgen/jsonops"
 	"homework-1-ErdemOzgen/model"
 	"homework-1-ErdemOzgen/search"
+	"log"
+	"os/exec"
+	"runtime"
 )
 
 type Book model.Book // Questtion []search.Book is good implementation???
 var books []Book
 
+func openbrowser(url string) {
+	var err error
+
+	switch runtime.GOOS {
+	case "linux":
+		err = exec.Command("xdg-open", url).Start()
+	case "windows":
+		err = exec.Command("rundll32", "url.dll,FileProtocolHandler", url).Start()
+	case "darwin":
+		err = exec.Command("open", url).Start()
+	default:
+		err = fmt.Errorf("unsupported platform")
+	}
+	if err != nil {
+		log.Fatal(err)
+	}
+
+}
+func runServer() {
+
+	cmd := exec.Command("pwd")
+
+	err := cmd.Start()
+
+	if err != nil {
+		log.Fatal(err)
+	}
+}
 func main() {
 
 	fmt.Println("ASCII ART")
@@ -37,5 +68,6 @@ func main() {
 
 	//----------------------------------------------------------------
 	// 4. Add extra REST API
-
+	runServer()
+	openbrowser("http://localhost:8080")
 }
