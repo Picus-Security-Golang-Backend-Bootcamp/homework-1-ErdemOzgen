@@ -69,8 +69,9 @@ func main() {
 
 	searchByAuthor("Erdem Ozgen", books)
 	searchByTitle("Golang Book", books)
+	searchByAuthor("Leo Tolstoy", books)
 	//----------------------------------------------------------------
 	// 3. Print all books
-	listBooks(books)
+	//listBooks(books)
 
 }
