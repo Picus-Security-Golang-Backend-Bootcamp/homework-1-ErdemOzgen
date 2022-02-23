@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"homework-1-ErdemOzgen/jsonops"
+
+	"github.com/kr/pretty"
 )
 
 type Book struct {
@@ -11,9 +13,10 @@ type Book struct {
 	Title     string `json:"title"`
 	Pages     int    `json:"pages"`
 	Country   string `json:"country"`
-	ImageLink string `json:"image_link"`
+	ImageLink string `json:"imageLink"`
 	Year      string `json:"year"`
 	Language  string `json:"language"`
+	Link      string `json:"link"`
 }
 
 func searchByAuthor(author string, books []Book) {
@@ -33,6 +36,7 @@ func searchByTitle(title string, books []Book) {
 		if book.Title == title {
 			fmt.Println("Founded")
 			fmt.Println(book)
+			fmt.Printf("%# v", pretty.Formatter(book))
 		}
 	}
 }
@@ -51,5 +55,6 @@ func main() {
 	//----------------------------------------------------------------
 
 	searchByAuthor("Erdem Ozgen", books)
+	searchByTitle("Golang Book", books)
 
 }
