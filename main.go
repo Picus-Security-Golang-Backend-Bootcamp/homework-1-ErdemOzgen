@@ -34,7 +34,7 @@ func openbrowser(url string) {
 }
 func runServer() {
 
-	cmd := exec.Command("pwd")
+	cmd := exec.Command("go", "run", "./restapi/restapiServer.go")
 
 	err := cmd.Start()
 
