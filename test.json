@@ -1008,5 +1008,15 @@
       "pages": 408,
       "title": "Golang Book",
       "year": 1951
+    },
+    {
+      "author": "Erdem",
+      "country": "Turkey",
+      "imageLink": "images/memoirs-of-hadrian.jpg",
+      "language": "Turkish",
+      "link": "https://en.wikipedia.org/wiki/Memoirs_of_Hadrian\n",
+      "pages": 408,
+      "title": "Golang Book 2",
+      "year": 1951
     }
   ]
