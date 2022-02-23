@@ -13,7 +13,7 @@ type Book model.Book
 
 var books []Book
 
-func GetBook(w http.ResponseWriter, r *http.Request) {
+func GetBookByAuthor(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	for _, b := range books {
 		//fmt.Println(params["author"])
