@@ -26,6 +26,16 @@ func searchByAuthor(author string, books []Book) {
 	}
 
 }
+
+func searchByTitle(title string, books []Book) {
+	fmt.Println("Searching")
+	for _, book := range books {
+		if book.Title == title {
+			fmt.Println("Founded")
+			fmt.Println(book)
+		}
+	}
+}
 func main() {
 	fmt.Println("Staring Program")
 
