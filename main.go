@@ -16,6 +16,16 @@ type Book struct {
 	Language  string `json:"language"`
 }
 
+func searchByAuthor(author string, books []Book) {
+	fmt.Println("Searching")
+	for _, book := range books {
+		if book.Author == author {
+			fmt.Println("Founded")
+			fmt.Println(book)
+		}
+	}
+
+}
 func main() {
 	fmt.Println("Staring Program")
 
@@ -26,6 +36,10 @@ func main() {
 
 	json.Unmarshal([]byte(jsonops.OpenJsonFile("test.json")), &books)
 	fmt.Println(len(books))
-	// ----------------------------------------------------------------
+	fmt.Println(books[0].Author)
+
+	//----------------------------------------------------------------
+
+	searchByAuthor("Erdem Ozgen", books)
 
 }
