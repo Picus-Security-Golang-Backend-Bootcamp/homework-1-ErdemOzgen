@@ -4,8 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"homework-1-ErdemOzgen/jsonops"
-
-	"github.com/kr/pretty"
 )
 
 type Book struct {
@@ -20,23 +18,32 @@ type Book struct {
 }
 
 func searchByAuthor(author string, books []Book) {
-	fmt.Println("Searching")
+	fmt.Println("Searching...") // TODO: After location set get rid of this line
 	for _, book := range books {
 		if book.Author == author {
-			fmt.Println("Founded")
-			fmt.Println(book)
+			fmt.Println("Founded") // TODO: After location set get rid of this line
+			//fmt.Println(book)
+			printPretty(&book)
 		}
 	}
 
 }
+func printPretty(book interface{}) {
+	b, err := json.MarshalIndent(book, "", "  ")
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(string(b))
+
+}
 
 func searchByTitle(title string, books []Book) {
-	fmt.Println("Searching")
+	fmt.Println("Searching...") // TODO: After location set get rid of this line
 	for _, book := range books {
 		if book.Title == title {
-			fmt.Println("Founded")
-			fmt.Println(book)
-			fmt.Printf("%# v", pretty.Formatter(book))
+			fmt.Println("Founded") // TODO: After location set get rid of this line
+			//fmt.Println(book)
+			printPretty(&book)
 		}
 	}
 }
