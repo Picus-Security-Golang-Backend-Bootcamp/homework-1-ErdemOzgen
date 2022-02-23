@@ -47,6 +47,12 @@ func searchByTitle(title string, books []Book) {
 		}
 	}
 }
+
+func listBooks(books []Book) {
+	for _, book := range books {
+		printPretty(&book)
+	}
+}
 func main() {
 	fmt.Println("Staring Program")
 
@@ -63,5 +69,8 @@ func main() {
 
 	searchByAuthor("Erdem Ozgen", books)
 	searchByTitle("Golang Book", books)
+	//----------------------------------------------------------------
+	// 3. Print all books
+	listBooks(books)
 
 }
