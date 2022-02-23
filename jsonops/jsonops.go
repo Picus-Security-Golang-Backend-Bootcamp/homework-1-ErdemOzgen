@@ -7,8 +7,8 @@ import (
 	"os"
 )
 
-func OpenJsonFile() {
-	jsonFile, err := os.Open("test.json")
+func OpenJsonFile(f string) {
+	jsonFile, err := os.Open(f)
 
 	// if we os.Open returns an error then handle it
 	if err != nil {

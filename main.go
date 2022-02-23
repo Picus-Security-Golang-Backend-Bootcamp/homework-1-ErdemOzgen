@@ -7,5 +7,5 @@ import (
 
 func main() {
 	fmt.Println("Staring Program")
-	jsonops.OpenJsonFile()
+	jsonops.OpenJsonFile("test.json")
 }
