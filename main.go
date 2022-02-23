@@ -15,17 +15,9 @@ func searchByAuthor(author string, books []Book) {
 		if book.Author == author {
 			fmt.Println("Founded") // TODO: After location set get rid of this line
 			//fmt.Println(book)
-			printPretty(&book)
+			utils.printPretty(&book)
 		}
 	}
-
-}
-func printPretty(book interface{}) {
-	b, err := json.MarshalIndent(book, "", "  ")
-	if err != nil {
-		fmt.Println(err)
-	}
-	fmt.Println(string(b))
 
 }
 
