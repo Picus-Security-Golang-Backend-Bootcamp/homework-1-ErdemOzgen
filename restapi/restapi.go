@@ -26,3 +26,7 @@ func GetBookByAuthor(w http.ResponseWriter, r *http.Request) {
 
 	json.NewEncoder(w).Encode("Book not found")
 }
+
+func GetAllBooks(w http.ResponseWriter, r *http.Request) {
+	json.NewEncoder(w).Encode(books)
+}
