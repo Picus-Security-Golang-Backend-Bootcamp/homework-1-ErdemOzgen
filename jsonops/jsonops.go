@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-func OpenJsonFile(f string) {
+func OpenJsonFile(f string) string {
 	jsonFile, err := os.Open(f)
 
 	// if we os.Open returns an error then handle it
@@ -19,6 +19,6 @@ func OpenJsonFile(f string) {
 	var buf bytes.Buffer
 	io.Copy(&buf, jsonFile)
 	asString := buf.String()
-	fmt.Println(asString)
-
+	//fmt.Println(asString)
+	return asString
 }
