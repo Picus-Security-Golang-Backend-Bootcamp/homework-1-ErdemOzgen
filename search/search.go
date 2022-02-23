@@ -29,3 +29,8 @@ func SearchByTitle(title string, books []Book) {
 		}
 	}
 }
+func ListBooks(books []Book) {
+	for _, book := range books {
+		utils.PrintPretty(&book)
+	}
+}
