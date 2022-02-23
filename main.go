@@ -4,47 +4,21 @@ import (
 	"encoding/json"
 	"fmt"
 	"homework-1-ErdemOzgen/jsonops"
-	"homework-1-ErdemOzgen/model"
-	"homework-1-ErdemOzgen/utils"
+	"homework-1-ErdemOzgen/search"
 )
 
-type Book model.Book
+//type Book model.Book // Questtion []search.Book is good implementation???
 
-func searchByAuthor(author string, books []Book) {
-	fmt.Println("Searching...") // TODO: After location set get rid of this line
-	for _, book := range books {
-		if book.Author == author {
-			fmt.Println("Founded") // TODO: After location set get rid of this line
-			//fmt.Println(book)
-			utils.PrintPretty(&book)
-		}
-	}
-
-}
-
-func searchByTitle(title string, books []Book) {
-	fmt.Println("Searching...") // TODO: After location set get rid of this line
-	for _, book := range books {
-		if book.Title == title {
-			fmt.Println("Founded") // TODO: After location set get rid of this line
-			//fmt.Println(book)
-			utils.PrintPretty(&book)
-		}
-	}
-}
-
-func listBooks(books []Book) {
-	for _, book := range books {
-		utils.PrintPretty(&book)
-	}
-}
 func main() {
-	fmt.Println("Staring Program")
+
+	fmt.Println("ASCII ART")
+	fmt.Println("Staring Program...")
+
+	var books []search.Book // slice of Books structs
 
 	// ----------------------------------------------------------------
 	// 1. Read json file and convert it to string
 	// 2. Add them to slice
-	var books []Book // slice of Books structs
 
 	json.Unmarshal([]byte(jsonops.OpenJsonFile("test.json")), &books)
 	fmt.Println(len(books))
@@ -52,9 +26,9 @@ func main() {
 
 	//----------------------------------------------------------------
 
-	searchByAuthor("Erdem Ozgen", books)
-	searchByTitle("Golang Book", books)
-	searchByAuthor("Leo Tolstoy", books)
+	search.SearchByAuthor("Erdem Ozgen", books)
+	search.SearchByTitle("Golang Book", books)
+	//search.SearchByAuthor("Leo Tolstoy", books)
 	//----------------------------------------------------------------
 	// 3. Print all books
 	//listBooks(books)
