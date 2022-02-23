@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"homework-1-ErdemOzgen/jsonops"
 	"homework-1-ErdemOzgen/model"
+	"homework-1-ErdemOzgen/utils"
 )
 
 type Book model.Book
@@ -15,7 +16,7 @@ func searchByAuthor(author string, books []Book) {
 		if book.Author == author {
 			fmt.Println("Founded") // TODO: After location set get rid of this line
 			//fmt.Println(book)
-			utils.printPretty(&book)
+			utils.PrintPretty(&book)
 		}
 	}
 
@@ -27,14 +28,14 @@ func searchByTitle(title string, books []Book) {
 		if book.Title == title {
 			fmt.Println("Founded") // TODO: After location set get rid of this line
 			//fmt.Println(book)
-			printPretty(&book)
+			utils.PrintPretty(&book)
 		}
 	}
 }
 
 func listBooks(books []Book) {
 	for _, book := range books {
-		printPretty(&book)
+		utils.PrintPretty(&book)
 	}
 }
 func main() {
