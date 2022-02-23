@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"homework-1-ErdemOzgen/banner"
 	"homework-1-ErdemOzgen/jsonops"
 	"homework-1-ErdemOzgen/model"
 	"homework-1-ErdemOzgen/search"
@@ -43,7 +44,7 @@ func runServer() {
 	}
 }
 func main() {
-
+	banner.PrintBanner()
 	fmt.Println("ASCII ART")
 	fmt.Println("Staring Program...")
 
@@ -68,6 +69,6 @@ func main() {
 
 	//----------------------------------------------------------------
 	// 4. Add extra REST API
-	runServer()
-	openbrowser("http://localhost:8080")
+	//runServer()
+	//openbrowser("http://localhost:8080")
 }
