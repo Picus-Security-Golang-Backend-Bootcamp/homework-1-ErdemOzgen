@@ -54,6 +54,7 @@ func RunServer() {
 		fmt.Println(sig)
 		done <- true
 	}()
+
 	err := cmd.Start()
 
 	if err != nil {
