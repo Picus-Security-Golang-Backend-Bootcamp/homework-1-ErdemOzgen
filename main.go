@@ -39,6 +39,5 @@ func main() {
 	//----------------------------------------------------------------
 	// 4. Add extra REST API
 	utils.RunServer()
-	//utils.Openbrowser("http://localhost:8000/books")
 
 }
