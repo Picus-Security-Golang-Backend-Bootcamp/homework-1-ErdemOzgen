@@ -34,3 +34,15 @@ func ListBooks(books []Book) {
 		utils.PrintPretty(&book)
 	}
 }
+
+func SearchByAuthorConcurently(author string, books []Book, c chan []Book) {
+	fmt.Println("Searching Concurently...") // TODO: After location set get rid of this line
+	for _, book := range books {
+		if book.Author == author {
+			fmt.Println("Founded") // TODO: After location set get rid of this line
+			//fmt.Println(book)
+			utils.PrintPretty(&book)
+		}
+	}
+
+}
