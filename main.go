@@ -28,16 +28,16 @@ func main() {
 	fmt.Println(books[0].Author)
 
 	//----------------------------------------------------------------
-
+	//3.Example SearchByAuthor and SearchByTitle
 	search.SearchByAuthor("Erdem Ozgen", books)
 	search.SearchByTitle("Golang Book", books)
-	//search.SearchByAuthor("Leo Tolstoy", books)
+	search.SearchByAuthor("Leo Tolstoy", books)
 	//----------------------------------------------------------------
-	// 3. Print all books
+	// 4. Print all books
 	//listBooks(books)
 
 	//----------------------------------------------------------------
-	// 4. Add extra REST API
+	// 5. Add extra REST API
 	utils.RunServer()
 
 }
