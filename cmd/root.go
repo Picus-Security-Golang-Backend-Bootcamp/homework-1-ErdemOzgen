@@ -13,7 +13,7 @@ import (
 //homework-1-ErdemOzgen
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "searcher",
+	Use:   "homework-1-ErdemOzgen",
 	Short: "Homework for patika.dev Picus Bootcamp",
 	Long: `This is project for patika.dev Picus Bootcamp homework 1.
 
