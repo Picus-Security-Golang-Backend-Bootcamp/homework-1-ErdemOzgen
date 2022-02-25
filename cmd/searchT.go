@@ -35,7 +35,10 @@ to quickly create a Cobra application.`,
 		s = append(s, args...)
 		fmt.Println(strings.Join(s, " "))
 		sd := strings.Join(args, " ")
-
+		if sd == "" {
+			fmt.Println("Please enter book's title")
+			return
+		}
 		json.Unmarshal([]byte(jsonops.OpenJsonFile("test.json")), &books)
 		search.SearchByTitle(sd, books)
 	},
