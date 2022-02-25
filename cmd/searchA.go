@@ -16,7 +16,7 @@ import (
 
 // searchACmd represents the searchA command
 var searchACmd = &cobra.Command{
-	Use:   "searchA",
+	Use:   "author",
 	Short: "For searching by Authors' name",
 	Long: `"func SearchByAuthor(author string, books []Book)" => function
 	takes author name and books array as parameters Does not return anything.

@@ -16,7 +16,7 @@ import (
 
 // searchTCmd represents the searchT command
 var searchTCmd = &cobra.Command{
-	Use:   "searchT",
+	Use:   "title",
 	Short: "For searching by Authors' name",
 	Long: `"func SearchByTitle(title string, books []Book)" => function
 	takes books title and books array as parameters Does not return anything.
