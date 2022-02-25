@@ -18,8 +18,8 @@ import (
 // searchACmd represents the searchA command
 var searchACmd = &cobra.Command{
 	Use:   "searchA",
-	Short: "Search by Author",
-	Long: `func SearchByAuthor(author string, books []Book) function
+	Short: "Parameters for searching by Authors' name",
+	Long: `"func SearchByAuthor(author string, books []Book)" => function
 	takes author name and books array as parameters Does not return anything.
 	Just prints the result.`,
 	Run: func(cmd *cobra.Command, args []string) {
@@ -31,7 +31,10 @@ var searchACmd = &cobra.Command{
 		s = append(s, args...)
 		fmt.Println(strings.Join(s, " "))
 		sd := strings.Join(args, " ")
-
+		if sd == "" {
+			fmt.Println("Please enter author's name")
+			return
+		}
 		json.Unmarshal([]byte(jsonops.OpenJsonFile("test.json")), &books)
 
 		search.SearchByAuthor(sd, books)
