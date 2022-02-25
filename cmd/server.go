@@ -14,13 +14,18 @@ import (
 // serverCmd represents the server command
 var serverCmd = &cobra.Command{
 	Use:   "server",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "Booting up the restapi server and open browser to see the result",
+	Long: `Function takes no parameters and boots up the restapi server also browser to see the result.
+	you can use the following commands:
+	
+	=>          $ homework-1-ErdemOzgen server
+	=>          $ homework-1-ErdemOzgen server -h
+	=>          $ homework-1-ErdemOzgen server -help
+	
+	==> curl http://localhost:8000/books
+	==> curl http://localhost:8000/books/Erdem
+	==> curl http://localhost:8000/books/Erdem%20Ozgen
+	`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("server called")
 		utils.RunServer()
