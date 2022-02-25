@@ -6,6 +6,7 @@ package cmd
 
 import (
 	"fmt"
+	"homework-1-ErdemOzgen/banner"
 	"homework-1-ErdemOzgen/utils"
 
 	"github.com/spf13/cobra"
@@ -28,6 +29,7 @@ var serverCmd = &cobra.Command{
 	==> curl http://localhost:8000/books/title/Golang%20Book
 	`,
 	Run: func(cmd *cobra.Command, args []string) {
+		banner.PrintBanner()
 		fmt.Println("server called")
 		utils.RunServer()
 	},
