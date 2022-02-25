@@ -19,12 +19,9 @@ import (
 var searchACmd = &cobra.Command{
 	Use:   "searchA",
 	Short: "Search by Author",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Long: `func SearchByAuthor(author string, books []Book) function
+	takes author name and books array as parameters Does not return anything.
+	Just prints the result.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		banner.PrintBanner()
 		fmt.Println("searchA called")
