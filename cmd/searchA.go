@@ -18,7 +18,7 @@ import (
 // searchACmd represents the searchA command
 var searchACmd = &cobra.Command{
 	Use:   "searchA",
-	Short: "A brief description of your command",
+	Short: "Search by Author",
 	Long: `A longer description that spans multiple lines and likely contains examples
 and usage of using your command. For example:
 

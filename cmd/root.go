@@ -10,18 +10,25 @@ import (
 	"github.com/spf13/cobra"
 )
 
-
-
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "homework-1-ErdemOzgen",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
+	Short: "Homework for patika.dev Picus Bootcamp",
+	Long: `This is project for patika.dev Picus Bootcamp homework 1.
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+#............^!JB@@#: .. J@@G5P55PB&@&PJ!^:....:~?5#@@@@@#^^^^~&@@@@@@@@@#~^^^~#@@@#5?~:.....:~7YB&@@
+#               ~B@?    :&@#55PB&@G7:             .~5&@@B    .&@@@@@@@@@#.   .#@#!.              :G@
+#    P#BBBBP!    .B&.    J@@B#@@#~    .!YGBBBG57:    :P@B    :&@@@@@@@@@#.   .#@~    !5GBBBG5?^ ^P@@
+#    B@@@@@@@~    J@J    .#@@@@B.    ?#@@@@@@@@@&Y!?5G#@B    :&@@@@@@@@@#.   .#@:    J&@@@@@@@@#&@@@
+#    B@@@@@&P.    P@&:    ?@@@@^    J@@@@@@@@@@@@@@@@@@@B    :&@@@@@@@@@#.   .#@5.     :^~7?Y5G#@@@@
+#    ~!!!!~:     J@@@Y    .#@@#.    #@@@@@@@@@@@@@@@@@@@B    :&@@@@@@@@@#.   .#@@#Y!:.         .^?B@
+#            .~JB@@@@&:    ?@@@^    Y@@@@@@@@@@@@@@@@@@@B    .&@@@@@@@@@#.   .#@@@@@&#GPYJ?!~.    .5
+#    JP555PGB&@@@@@@@@Y    .#@@G.    ?&@@@@@@@@@&5!J5G#@&:    5@@@@@@@@@Y    ^@@@@P#@@@@@@@@@@J    :
+#    B@@@@@@@@@@@@@@@@&:    7@@@B~    .!5GB##B57:    :P@@G.    !PB#&#B5!    .G@@G^ .~?5GB###B5^    !
+#    B@@@@@@@@@@@@@@@@@5     B@@@@P!.      .      .^Y&@@@@#7.     ...     .7#@@&?:       ...     .?&
+JJJJJ#@@@@@@@@@@@@@@@@@&J????G@@@@@@#P?~:.   .:^75B@@@@@@@@@#57~:.   .:~?5#@@@@@@&GY7~:.    .:^7Y#@@
+			      PATIKA DEV BOOTCAMP ERDEM OZGEN
+	`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
@@ -47,5 +54,3 @@ func init() {
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
-
-
