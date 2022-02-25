@@ -7,6 +7,7 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
+	"homework-1-ErdemOzgen/banner"
 	"homework-1-ErdemOzgen/jsonops"
 	"homework-1-ErdemOzgen/search"
 	"strings"
@@ -24,7 +25,7 @@ var searchTCmd = &cobra.Command{
 `,
 	Run: func(cmd *cobra.Command, args []string) {
 
-		//banner.PrintBanner()
+		banner.PrintBanner()
 		//fmt.Println("searchT called")
 		var s []string
 		var books []search.Book

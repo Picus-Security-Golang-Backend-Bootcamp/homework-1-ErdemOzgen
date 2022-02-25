@@ -7,6 +7,7 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
+	"homework-1-ErdemOzgen/banner"
 	"homework-1-ErdemOzgen/jsonops"
 	"homework-1-ErdemOzgen/search"
 	"strings"
@@ -22,7 +23,7 @@ var searchACmd = &cobra.Command{
 	takes author name and books array as parameters Does not return anything.
 	Just prints the result if exists in datasets.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		//banner.PrintBanner()
+		banner.PrintBanner()
 		//fmt.Println("searchA called")
 		var s []string
 		var books []search.Book
