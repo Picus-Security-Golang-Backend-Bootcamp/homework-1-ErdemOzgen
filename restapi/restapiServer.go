@@ -29,6 +29,20 @@ func GetBook(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode("Book not found")
 }
 
+func GetBookT(w http.ResponseWriter, r *http.Request) {
+	params := mux.Vars(r)
+	for _, b := range books {
+		//fmt.Println(params["author"])
+		if b.Title == params["title"] {
+			fmt.Println(b.Author)
+			json.NewEncoder(w).Encode(b)
+			return
+		}
+	}
+
+	json.NewEncoder(w).Encode("Book not found")
+}
+
 func GetAllBooks(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(books)
 }
@@ -57,14 +71,13 @@ func DeleteBook(w http.ResponseWriter, r *http.Request) {
 func main() {
 
 	json.Unmarshal([]byte(jsonops.OpenJsonFile("test.json")), &books)
-	//fmt.Print(books)
+
 	router := mux.NewRouter()
 
-	//router.HandleFunc("/people", GetPeopleEndpoint).Methods("GET")
 	router.HandleFunc("/books", GetAllBooks).Methods("GET")
-	//router.HandleFunc("/people/{id}", GetPersonEndpoint).Methods("GET")
-	router.HandleFunc("/books/{author}", GetBook).Methods("GET")
 
+	router.HandleFunc("/books/author/{author}", GetBook).Methods("GET")
+	router.HandleFunc("/books/title/{title}", GetBookT).Methods("GET")
 	router.HandleFunc("/books", CreateBook).Methods("POST")
 
 	fmt.Println("Starting server on port 8000...")

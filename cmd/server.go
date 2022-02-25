@@ -23,8 +23,9 @@ var serverCmd = &cobra.Command{
 	=>          $ homework-1-ErdemOzgen server -help
 	
 	==> curl http://localhost:8000/books
-	==> curl http://localhost:8000/books/Erdem
-	==> curl http://localhost:8000/books/Erdem%20Ozgen
+	==> curl http://localhost:8000/books/author/Erdem
+	==> curl http://localhost:8000/books/author/Erdem%20Ozgen
+	==> curl http://localhost:8000/books/title/Golang%20Book
 	`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("server called")
