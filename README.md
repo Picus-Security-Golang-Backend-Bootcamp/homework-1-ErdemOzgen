@@ -6,7 +6,7 @@ homework-1-ErdemOzgen created by GitHub Classroom
 
 ### Docker file for docker buildings 
 
-`bash
+```dockerfile
 FROM golang
 
 WORKDIR $GOPATH/src/src/homework-1-ErdemOzgen
@@ -21,4 +21,4 @@ EXPOSE 8000
 
 CMD ["homework-1-ErdemOzgen"]
 
-`
+```
