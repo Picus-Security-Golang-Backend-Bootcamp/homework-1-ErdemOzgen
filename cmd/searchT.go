@@ -7,7 +7,6 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
-	"homework-1-ErdemOzgen/banner"
 	"homework-1-ErdemOzgen/jsonops"
 	"homework-1-ErdemOzgen/search"
 	"strings"
@@ -18,17 +17,15 @@ import (
 // searchTCmd represents the searchT command
 var searchTCmd = &cobra.Command{
 	Use:   "searchT",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "For searching by Authors' name",
+	Long: `"func SearchByTitle(title string, books []Book)" => function
+	takes books title and books array as parameters Does not return anything.
+	Just prints the result if exists in datasets.
+`,
 	Run: func(cmd *cobra.Command, args []string) {
 
-		banner.PrintBanner()
-		fmt.Println("searchT called")
+		//banner.PrintBanner()
+		//fmt.Println("searchT called")
 		var s []string
 		var books []search.Book
 
