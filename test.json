@@ -1002,21 +1002,21 @@
     {
       "author": "Erdem Ozgen",
       "country": "Turkey",
-      "imageLink": "images/memoirs-of-hadrian.jpg",
+      "imageLink": "images/erdemOzgen.jpg",
       "language": "Turkish",
-      "link": "https://en.wikipedia.org/wiki/Memoirs_of_Hadrian\n",
+      "link": "https://en.wikipedia.org/wiki/Erdem_Ozgen\n",
       "pages": 408,
       "title": "Golang Book",
-      "year": 1951
+      "year": 2022
     },
     {
       "author": "Erdem",
       "country": "Turkey",
-      "imageLink": "images/memoirs-of-hadrian.jpg",
+      "imageLink": "images/Erdem.jpg",
       "language": "Turkish",
-      "link": "https://en.wikipedia.org/wiki/Memoirs_of_Hadrian\n",
+      "link": "https://en.wikipedia.org/wiki/Erdem\n",
       "pages": 408,
       "title": "Golang Book 2",
-      "year": 1951
+      "year": 2022
     }
   ]
