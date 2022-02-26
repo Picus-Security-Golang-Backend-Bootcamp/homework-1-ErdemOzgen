@@ -16,6 +16,15 @@ homework-1-ErdemOzgen
 
 ![img1](./img/1.png)
 
+Use this for help functionality
+```bash
+homework-1-ErdemOzgen -h
+```
+![img2](./img/2.png)
+
+![img3](./img/3.png)
+![img4](./img/4.png)
+![img5](./img/5.png)
 
 
 
