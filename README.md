@@ -6,10 +6,17 @@ homework-1-ErdemOzgen created by GitHub Classroom
 
 ### Docker file for docker buildings 
 
+```bash
+
+>>> docker build -t homework-1-ErdemOzgen .
+
+```
+
+
 ```dockerfile
 FROM golang
 
-WORKDIR $GOPATH/src/src/homework-1-ErdemOzgen
+WORKDIR $GOPATH/src/homework-1-ErdemOzgen
 
 COPY . .
 
@@ -17,8 +24,8 @@ RUN go get -d -v ./...
 RUN go install -v ./...
 RUN go build -o .
 
-EXPOSE 8000
+EXPOSE 8000:8000
 
-CMD ["homework-1-ErdemOzgen"]
+CMD ["homework-1-ErdemOzgen server"]
 
 ```
