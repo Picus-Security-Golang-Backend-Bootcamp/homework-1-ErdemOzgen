@@ -14,16 +14,36 @@ homework-1-ErdemOzgen
 
 # How it works ?
 
-![img1](./img/1.png)
-
-Use this for help functionality
+1. Use this for help functionality
 ```bash
 homework-1-ErdemOzgen -h
 ```
+![img1](./img/1.png)
+
+2. Use this for search by author name
+```bash
+homework-1-ErdemOzgen author Erdem # Change Erdem to other author name.
+```
 ![img2](./img/2.png)
 
+3. Use this for search by title of book
+```bash
+homework-1-ErdemOzgen author Golang Book # Change Golang Book to other book name.
+```
+
 ![img3](./img/3.png)
+
+4. Use this for list all books
+```bash
+homework-1-ErdemOzgen list 
+```
 ![img4](./img/4.png)
+
+
+5. Use this create server and get all functionality with Rest API
+```bash
+homework-1-ErdemOzgen server
+```
 ![img5](./img/5.png)
 
 
