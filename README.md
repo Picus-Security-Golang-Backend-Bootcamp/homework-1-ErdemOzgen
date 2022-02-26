@@ -1,14 +1,18 @@
 # homework-1-ErdemOzgen
 ![PicusPatika](./img/picuspatika.png)
 
-homework-1-ErdemOzgen created by GitHub Classroom
+# How it works ?
+
+![img1](./img/1.png)
+
+
 
 
 ### Docker file for docker buildings 
 
 ```bash
 
->>> docker build -t homework-1-ErdemOzgen .
+docker build -t homework-1-ErdemOzgen .
 
 ```
 
