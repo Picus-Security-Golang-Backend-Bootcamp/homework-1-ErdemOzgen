@@ -1,9 +1,23 @@
 # homework-1-ErdemOzgen
 ![PicusPatika](./img/picuspatika.png)
 
+This is first assignment for picus patika.dev.
+
+# How to install ?
+
+```bash
+go get ./...
+go install 
+homework-1-ErdemOzgen
+
+```
+
 # How it works ?
 
 ![img1](./img/1.png)
+
+
+
 
 
 
