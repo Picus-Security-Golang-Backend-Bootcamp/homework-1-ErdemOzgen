@@ -55,7 +55,7 @@ homework-1-ErdemOzgen server
 
 ```bash
 
-docker build -t homework-1-ErdemOzgen .
+docker build -t homework-1-ErdemOzgen-docker .
 
 ```
 
