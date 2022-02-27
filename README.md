@@ -71,7 +71,7 @@ RUN go get -d -v ./...
 RUN go install -v ./...
 RUN go build -o .
 
-EXPOSE 8000:8000
+EXPOSE 8000
 
 CMD ["homework-1-ErdemOzgen server"]
 
